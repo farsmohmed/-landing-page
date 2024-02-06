@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+header {
+    color: #fff;
+    padding: 4em 0;
+    text-align: center;
+    
+
+}
+
+nav {
+    background-color: #5903e4d6;
+    position: fixed;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    width: 80%;
+    left: 10%;
+    
+
+    
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+
+}
+
+
+
+nav a:hover {
+    color: #ffcc00;
+    animation: hoverAnimation 0.5s ease;
+    cursor: pointer;
+}
+
+@keyframes hoverAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#home {
+    text-align: center;
+    color: #f8f9fa;
+
+}
+
+#faq {
+    text-align: center;
+}
+
+.hero-section {
+    color: #fff;
+    text-align: center;
+    padding: 4em;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #ffcc00;
+}
+
+.hero-content p {
+    color: #fff;
+}
+
+.cta-container {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1em 2em;
+    font-size: 1em;
+    text-decoration: none;
+    background-color: #ffcc00;
+    color: #212529;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 10px 10px rgb(100 100 100 /50%);
+}
+
+
+.cta-button:hover {
+    background-color: #ffdb58;
+    box-shadow: 0px 10px 10px rgb(100 100 100 /80%);
+    animation: hoverAnimation 0.5s ease;
+    cursor: pointer;
+}
+
+@keyframes hoverAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#features {
+    background-color: #fff;
+    color: #343a40;
+    padding: 4em;
+}
+
+#features h2{
+    color: #fff;
+}
+
+#features ul li{
+    color: #ddd;
+}
+
+
+#testimonials {
+    background-color: #f8f9fa;
+    color: #343a40;
+    padding: 4em 0;
+    text-align: center;
+}
+
+.testimonial {
+    max-width: 600px;
+    margin: 0 auto 2em;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.testimonial p {
+    font-style: italic;
+    color: #555;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    margin-top: 0.5em;
+    color: #777;
+}
+
+footer {
+    background-color: #5b03e4;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* ... Existing styles ... */
+
+#contact {
+    background-color: #5b03e4;
+    color: #fff;
+    padding: 4em;
+    text-align: center;
+
+}
+
+#contact h2 {
+    color: #ffcc00;
+}
+
+.form-container {
+    text-align: center;
+    color: #212529;
+}
+
+.form-input {
+    padding: 15px;
+    margin: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #ffcc00;
+}
+
+.form-input::placeholder {
+    color: #777;
+}
+
+button {
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgb(100 100 100 /50%);
+}
+
+/* Additional styles for icons and progress bar */
+.cta-button i {
+    margin-right: 5px;
+}
+
+.progress-bar-container {
+    margin-top: 2em;
+    text-align: center;
+}
+
+.progress-bar {
+    background-color: #ddd;
+    height: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    background-color: #ffcc00;
+    height: 100%;
+    transition: width 0.6s ease-in-out;
+    width: 0;
+}
+
+/* Custom styles for different sections */
+#features {
+    background-color: #f4f4f4;
+    color: #343a40;
+    padding: 4em;
+}
+
+#testimonials {
+    background-color: #fff;
+    color: #343a40;
+    padding: 4em 0;
+    text-align: center;
+}
+
+.testimonial {
+    max-width: 600px;
+    margin: 0 auto 2em;
+    padding: 1.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+}
+
+footer {
+    background-color: #5b03e4;
+    color: #fff;
+    text-align: center;
+    padding: 1.5em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* ... Existing styles ... */
+
+#team {
+    background-color: #f8f9fa;
+    color: #343a40;
+    padding: 4em 0;
+    text-align: center;
+    
+}
+
+.team-member {
+    max-width: 300px;
+    margin: 0 auto 2em;
+    padding: 1.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 10px 10px rgb(100 100 100 /50%);
+    transition: .5s;
+}
+
+.team-member:hover {
+    
+    box-shadow: 0px 10px 10px rgb(100 100 100 /80%);
+    animation: hoverAnimation 0.5s ease;
+    cursor: pointer;
+}
+
+@keyframes hoverAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.team-member img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.team-member h3 {
+    margin: 0.5em 0;
+}
+
+.team-member p {
+    color: #777;
+}
+
+.social-links {
+    margin-top: 1em;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #333;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ffcc00;
+}
+
+
+/* ... Existing styles ... */
+
+#pricing {
+    background-color: #5b03e4;
+    color: #fff;
+    padding: 4em 0;
+    text-align: center;
+}
+
+.pricing-plan {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.pricing-plan:hover {
+    animation: hoverAnimation 0.5s ease;
+    cursor: pointer;
+}
+
+@keyframes hoverAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.pricing-plan h3 {
+    margin: 0.5em 0;
+    color: #212529;
+}
+
+.pricing-plan p {
+    color: #777;
+}
+
+.pricing-plan .price {
+    font-size: 2em;
+    color: #ffcc00;
+}
+
+.pricing-cta {
+    margin-top: 2em;
+}
+
+.pricing-cta a {
+    display: inline-block;
+    padding: 1em 2em;
+    font-size: 1em;
+    text-decoration: none;
+    background-color: #ffcc00;
+    color: #212529;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.pricing-cta a:hover {
+    background-color: #ffdb58;
+}
+
+
+/* ... Existing styles ... */
+
+#faq {
+    background-color: #f8f9fa;
+    color: #343a40;
+    padding: 4em 0;
+}
+
+.faq-accordion {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+.faq-question,
+.faq-answer {
+    padding: 1em;
+}
+
+.faq-question {
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.faq-answer {
+    display: none;
+    background-color: #f8f9fa;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+.faq-question.active {
+    background-color: #ffcc00;
+    color: #212529;
+}
+
+
+/* ... Existing styles ... */
+
+#contact-info {
+    background-color: #5b03e4;
+    color: #fff;
+    padding: 4em 0;
+    text-align: center;
+}
+
+.contact-info-item {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 1em;
+}
+
+.contact-info-item h3 {
+    margin: 0.5em 0;
+}
+
+.contact-info-item p {
+    color: #777;
+    margin: 0;
+}
+
+
+/* Styles for responsive design */
+@media screen and (max-width: 768px) {
+    nav {
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        width: 80%;
+        padding: 4px;
+        
+        
+    }
+
+    nav a {
+        margin: 0 5px;
+        
+    }
+
+    .hero-content h2 {
+        font-size: 2em;
+    }
+
+    .cta-button {
+        font-size: 0.9em;
+    }
+
+    #features,
+    #testimonials,
+    #contact {
+        padding: 2em;
+    }
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 4.5em 0;
+    }
+
+    .hero-section {
+        padding: 3em;
+    }
+
+    .hero-content h2 {
+        font-size: 1.8em;
+    }
+
+    .cta-button {
+        font-size: 0.8em;
+        padding: 0.8em 1.5em;
+    }
+
+    #features ul {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+    }
+
+    #features li {
+        margin-bottom: 1em;
+    }
+
+    #testimonials .testimonial {
+        padding: 1em;
+    }
+
+    .form-input {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .faq-item {
+        margin-bottom: 0.5em;
+    }
+}
+
+
+
