@@ -1,40 +1,302 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
+/* Background */
 body {
     font-family: 'Bebas Neue', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
-    color: #343a40;
+    background: linear-gradient(to bottom, #87ceeb 0%,  #5dc3eb 10%,  #ffffff 15%, #1fb1eb 100%); /* Light blue to white gradient for daytime */
+    color: #000; /* Black for better readability */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    
 }
+
+.img{
+    width: 20%;
+    height: 20%;
+    margin-top: 10%;
+    margin-left: 28%;
+    animation: movebirds 5s infinite alternate; /* birds movement animation */
+    
+}
+
+/*  Animation */
+@keyframes movebirds {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Sun and Moon */
+.sun,
+.moon {
+    position: absolute;
+    top: 20%; /* Adjust positioning as needed */
+    right: 20%; /* Adjust positioning as needed */
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8); /* Glow effect for sun */
+    transition: transform 0.3s ease;
+    animation: moveSunmoon 5s infinite alternate; /* Sun  moon movement animation */
+    cursor: pointer;
+}
+
+/* Sun mon Animation */
+@keyframes moveSunmoon {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.sun {
+    background-color: #ffd700; /* Sun color */
+    box-shadow: 0 0 50px rgba(255, 215, 0, 0.8); 
+}
+
+.moon {
+    background-color: #f9f9f9; /* Moon color */
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.8); 
+    display: none; /* Initially hide the moon */
+    top: 20%; 
+    left: 20%;
+}
+
+/* Night Mode */
+body.night-mode {
+    background: linear-gradient(to bottom, #002147 0%, #0b1926 5%, #29445d 10%, #0b4880 100%); /* Dark blue to black gradient for nighttime */
+    color: #fff; /* White for better readability */
+}
+
+body.night-mode .sun {
+    display: none; /* Hide the sun in night mode */
+}
+
+body.night-mode .moon {
+    display: block; /* Show the moon in night mode */
+    transform: translateY(-5%); /* Move the moon slightly up in night mode */
+}
+
+
+
+.star {
+    position: absolute;
+    background-color: #fff;
+    width: 2px; /* Adjust size as needed */
+    height: 2px; /* Adjust size as needed */
+    border-radius: 50%;
+    animation: twinklingStars 2s infinite; /* Star twinkling animation */
+}
+
+/* Animations */
+@keyframes twinklingStars {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+/* Star positions */
+.star1 {
+    top: 50%; /* Adjust positioning as needed */
+    left: 38%; /* Adjust positioning as needed */
+}
+
+.star2 {
+    top: 30%; /* Adjust positioning as needed */
+    left: 60%; /* Adjust positioning as needed */
+}
+
+.star3 {
+    top: 35%; /* Adjust positioning as needed */
+    left: 15%; /* Adjust positioning as needed */
+}
+
+.star4 {
+    top:  35%; /* Adjust positioning as needed */
+    left: 50%; /* Adjust positioning as needed */
+}
+
+.star5 {
+    top: 40%; /* Adjust positioning as needed */
+    left: 30%; /* Adjust positioning as needed */
+}
+
+.star6 {
+    top: 50%; /* Adjust positioning as needed */
+    left: 20%; /* Adjust positioning as needed */
+}
+
+.star7 {
+    top: 35%; /* Adjust positioning as needed */
+    left: 87%; /* Adjust positioning as needed */
+}
+
+.star8 {
+    top: 10%; /* Adjust positioning as needed */
+    left: 5%; /* Adjust positioning as needed */
+}
+
+.star9 {
+    top: 20%; /* Adjust positioning as needed */
+    left: 68%; /* Adjust positioning as needed */
+}
+
+.star10 {
+    top: 20%; /* Adjust positioning as needed */
+    left: 90%; /* Adjust positioning as needed */
+}
+
+/* Add more star positions as needed */
+
+
+
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Adjust moon and star sizes and positions for smaller screens */
+    .moon {
+        top: 15%;
+        left: 10%;
+        width: 50px;
+        height: 50px;
+        
+    }
+
+    .sun {
+        top: 15%;
+        right: 10%;
+        width: 50px;
+        height: 50px;
+        
+    }
+
+        /* Star positions */
+    .star1 {
+    top: 15%; /* Adjust positioning as needed */
+    left: 90%; /* Adjust positioning as needed */
+    }
+
+    .star2 {
+    top: 20%; /* Adjust positioning as needed */
+    left: 50%; /* Adjust positioning as needed */
+    }
+
+    .star3 {
+    top: 35%; /* Adjust positioning as needed */
+    left: 15%; /* Adjust positioning as needed */
+    }
+
+    .star4 {
+    top:  26%; /* Adjust positioning as needed */
+    left: 40%; /* Adjust positioning as needed */
+    }
+
+    .star5 {
+    top: 27%; /* Adjust positioning as needed */
+    left: 30%; /* Adjust positioning as needed */
+    }
+
+    .star6 {
+    top: 25%; /* Adjust positioning as needed */
+    left: 20%; /* Adjust positioning as needed */
+    }
+
+    .star7 {
+    top: 15%; /* Adjust positioning as needed */
+    left: 45%; /* Adjust positioning as needed */
+    }
+
+    .star8 {
+    top: 20%; /* Adjust positioning as needed */
+    left: 70%; /* Adjust positioning as needed */
+    }
+
+    .star9 {
+    top: 30%; /* Adjust positioning as needed */
+    left: 68%; /* Adjust positioning as needed */
+    }
+
+    .star10 {
+    top: 20%; /* Adjust positioning as needed */
+    left: 35%; /* Adjust positioning as needed */
+    }
+
+    /* Add more star positions as needed */
+
+    .img{
+        width: 25%;
+        height: 25%;
+        padding-top: 25%;
+        
+        
+    }
+}
+
+
+
 
 header {
     color: #fff;
     padding: 4em 0;
     text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
     
-
 }
 
+
+
+
+
+
 nav {
-    background-color: #5903e4d6;
+    background-color: #a28a1fb1;
     position: fixed;
     top: 30px;
     display: flex;
     justify-content: center;
     border-radius: 25px;
     width: 80%;
+    height: 8%;
     left: 10%;
     
 
     
 }
 
+nav a img{
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    margin-inline-end: 400px;
+    
+    
+    
+    
+}
+
 nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 15px;
+    margin-top: auto;
     font-size: 1.2em;
     transition: color 0.3s ease;
 
@@ -71,9 +333,10 @@ nav a:hover {
 }
 
 .hero-section {
-    color: #fff;
     text-align: center;
     padding: 4em;
+    
+    background-position: center;
 }
 
 .hero-content {
@@ -88,7 +351,7 @@ nav a:hover {
 }
 
 .hero-content p {
-    color: #fff;
+    color: black;
 }
 
 .cta-container {
@@ -106,8 +369,8 @@ nav a:hover {
     border-radius: 5px;
     transition: background-color 0.3s ease;
     box-shadow: 0px 10px 10px rgb(100 100 100 /50%);
+    
 }
-
 
 .cta-button:hover {
     background-color: #ffdb58;
@@ -128,18 +391,52 @@ nav a:hover {
     }
 }
 
+.cta-buttonx{
+    display: flex;
+    margin-left: 45%;
+    padding: 1em 2em;
+    font-size: 1em;
+    text-decoration: none;
+    background-color: #ffcc00;
+    color: #212529;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 10px 10px rgb(100 100 100 /50%);
+
+}
+
+
+.cta-buttonx:hover {
+    background-color: #ffdb58;
+    box-shadow: 0px 10px 10px rgb(100 100 100 /80%);
+    animation: hoverAnimation 0.5s ease;
+    cursor: pointer;
+}
+
+@keyframes hoverAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 #features {
-    background-color: #fff;
-    color: #343a40;
     padding: 4em;
+    background-position: center;  
+    
 }
 
 #features h2{
-    color: #fff;
+    color: #ffcc00;
 }
 
 #features ul li{
-    color: #ddd;
+    color: black;
 }
 
 
@@ -171,19 +468,20 @@ nav a:hover {
 }
 
 footer {
-    background-color: #5b03e4;
+    background-color: #a28a1fb1;
     color: #fff;
     text-align: center;
-    padding: 1em;
+    padding: 1.5em;
     position: fixed;
     bottom: 0;
     width: 100%;
+
 }
 
 /* ... Existing styles ... */
 
 #contact {
-    background-color: #5b03e4;
+    
     color: #fff;
     padding: 4em;
     text-align: center;
@@ -226,6 +524,7 @@ button {
 /* Additional styles for icons and progress bar */
 .cta-button i {
     margin-right: 5px;
+    
 }
 
 .progress-bar-container {
@@ -244,15 +543,9 @@ button {
     background-color: #ffcc00;
     height: 100%;
     transition: width 0.6s ease-in-out;
-    width: 0;
+    width: 50%
 }
 
-/* Custom styles for different sections */
-#features {
-    background-color: #f4f4f4;
-    color: #343a40;
-    padding: 4em;
-}
 
 #testimonials {
     background-color: #fff;
@@ -270,22 +563,13 @@ button {
     background-color: #f8f9fa;
 }
 
-footer {
-    background-color: #5b03e4;
-    color: #fff;
-    text-align: center;
-    padding: 1.5em;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+
 
 
 /* ... Existing styles ... */
 
 #team {
-    background-color: #f8f9fa;
-    color: #343a40;
+    color: #ffcc00;
     padding: 4em 0;
     text-align: center;
     
@@ -328,6 +612,7 @@ footer {
 
 .team-member h3 {
     margin: 0.5em 0;
+    color: #000;
 }
 
 .team-member p {
@@ -354,10 +639,22 @@ footer {
 /* ... Existing styles ... */
 
 #pricing {
-    background-color: #5b03e4;
-    color: #fff;
+
+    color: #f4f4f4;
     padding: 4em 0;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+
+#pricing h2{
+    color: #ffcc00;
+    margin: auto;
+    
+       
+
 }
 
 .pricing-plan {
@@ -421,12 +718,30 @@ footer {
 }
 
 
+#team{
+    display: flex;
+    flex-direction: row;
+}
+
+#team h2{
+    margin: auto;
+    
+
+
+}
+
+
+
+
 /* ... Existing styles ... */
 
 #faq {
-    background-color: #f8f9fa;
-    color: #343a40;
+    color: #4c5243;
     padding: 4em 0;
+}
+
+#faq h2{
+    color: #ffcc00;
 }
 
 .faq-accordion {
@@ -469,7 +784,7 @@ footer {
 /* ... Existing styles ... */
 
 #contact-info {
-    background-color: #5b03e4;
+    
     color: #fff;
     padding: 4em 0;
     text-align: center;
@@ -502,15 +817,38 @@ footer {
         justify-content: center;
         justify-content: space-between;
         flex-direction: row;
-        align-items: center;
-        width: 80%;
-        padding: 4px;
+        align-items: flex-start;
+        width: 90%;
+        height: 6%;
+        left: 5%;
+        padding: 5px;
+        
+        
         
         
     }
 
     nav a {
-        margin: 0 5px;
+        margin: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: smaller;
+        
+        
+    
+        
+
+}
+
+    nav a img{
+        width: 40px;
+        height: 42px;
+        margin-inline-end: auto;
+        
+
+        
+    
+        
         
     }
 
@@ -527,6 +865,19 @@ footer {
     #contact {
         padding: 2em;
     }
+
+    #team{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #pricing{
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    
 }
 
 /* Responsive design for smaller screens */
@@ -570,7 +921,14 @@ footer {
     .faq-item {
         margin-bottom: 0.5em;
     }
+
+    footer {
+        font-size: smaller;
+    
+    }
 }
+
+
 
 
 
