@@ -9,12 +9,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission (replace with your backend logic)
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    // Add your form submission logic here
-    alert('Form submitted!');
-});
 
 // Smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -46,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         body.classList.toggle('night-mode');
     });
 });
+
 
 
 
