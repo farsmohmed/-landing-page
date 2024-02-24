@@ -41,6 +41,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+ // Function to delay for a specified time
+ function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// Function to display header content sequentially
+async function displayHeaderContentsSequentially() {
+    const companyName = document.querySelector('header h1');
+    const tagline = document.querySelector('header p');
+    const ctaContainer = document.querySelector('.cta-container');
+
+    companyName.style.display = 'block'; // Display the company name
+    await delay(1000); // Wait for 1 second
+
+    tagline.style.display = 'block'; // Display the tagline
+    await delay(1000); // Wait for 1 second
+
+    ctaContainer.style.display = 'block'; // Display the call-to-action button
+}
+
+// Call the displayHeaderContentsSequentially function
+displayHeaderContentsSequentially();
+
+
+
 
 
 
