@@ -51,7 +51,8 @@ async function displayHeaderContentsSequentially() {
     const companyName = document.querySelector('header h1');
     const tagline = document.querySelector('header p');
     const ctaContainer = document.querySelector('.cta-container');
-
+    
+    await delay(1000);
     companyName.style.display = 'block'; // Display the company name
     await delay(1000); // Wait for 1 second
 
