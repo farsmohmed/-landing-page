@@ -149,8 +149,8 @@ body.night-mode .moon {
 .star {
     position: absolute;
     background-color: #fff;
-    width: 2px; /* Adjust size as needed */
-    height: 2px; /* Adjust size as needed */
+    width: 1px; /* Adjust size as needed */
+    height: 1px; /* Adjust size as needed */
     border-radius: 50%;
     animation: twinklingStars 2s infinite; /* Star twinkling animation */
 }
