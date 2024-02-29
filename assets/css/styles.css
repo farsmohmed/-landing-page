@@ -293,7 +293,7 @@ body.night-mode .moon {
     /* Move the moon slightly up in night mode */
 }
 
-body.night-mode .cloud{
+body.night-mode .cloud, .smoke {
     opacity: 0.10;
 }
 
@@ -505,6 +505,19 @@ body.night-mode .cloud{
     }
 
     .smoke {
+        width: 100px; /* Adjust width as needed */
+        height: 50px; /* Adjust height as needed */
+
+        
+    }
+
+    .zipper-container {
+        width: 50%;
+        height: 3%; /* Adjust height as needed */
+    
+    }
+    
+    .cloud {
         width: 100px; /* Adjust width as needed */
         height: 50px; /* Adjust height as needed */
         
@@ -1164,17 +1177,6 @@ button {
         margin: auto;
     }
 
-    .zipper-container {
-        width: 50%;
-        height: 3%; /* Adjust height as needed */
-    
-    }
-    
-    .cloud {
-        width: 100px; /* Adjust width as needed */
-        height: 50px; /* Adjust height as needed */
-        
-    }
 
 
 }
