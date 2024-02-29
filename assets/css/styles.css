@@ -75,7 +75,7 @@ header p,
 
 .zipper-container {
     width: 100%;
-    height: 5%; /* Adjust height as needed */
+    height: 6%; /* Adjust height as needed */
     display: flex;
     justify-content: center;
     align-items: flex-start; /* Align zipper to the top */
@@ -89,6 +89,7 @@ header p,
     position: absolute;
     opacity: 0.8;
     animation: moveClouds 30s infinite linear; /* Cloud moving animation */
+    z-index: 3;
 }
 
 /* Animation keyframes */
@@ -270,7 +271,7 @@ header p,
     /* Initially hide the moon */
     top: 20%;
     left: 20%;
-    z-index: 10;
+    z-index: 4;
 }
 
 /* Night Mode */
@@ -498,7 +499,7 @@ body.night-mode .cloud, .smoke {
     .img {
         width: 50%;
         height: 50%;
-        padding-top: 50%;
+        padding-top: 75%;
         margin-left: 50%;
 
 
@@ -551,7 +552,7 @@ nav {
     width: 80%;
     height: 8%;
     left: 10%;
-    z-index: 9;
+    z-index: 90;
 
 
 
@@ -1180,9 +1181,6 @@ button {
 
 
 }
-
-
-
 
 
 
