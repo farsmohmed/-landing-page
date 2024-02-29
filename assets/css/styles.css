@@ -1,20 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 /* Background */
 body {
     font-family: 'Bebas Neue', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #87ceeb 0%,  #5dc3eb 10%,  #ffffff 15%, #1fb1eb 100%); /* Light blue to white gradient for daytime */
-    color: #000; /* Black for better readability */
+    background: linear-gradient(to bottom, #87ceeb 0%, #5dc3eb 10%, #ffffff 15%, #1fb1eb 100%);
+    /* Light blue to white gradient for daytime */
+    color: #000;
+    /* Black for better readability */
     transition: background-color 0.3s ease, color 0.3s ease;
-    
+
+
 }
 
 header h1,
 header p,
 .cta-container {
-    display: none; /* Hide header content by default */
+    display: none;
+    /* Hide header content by default */
 
 }
 
@@ -45,9 +50,11 @@ header p,
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.1);
     }
+
     100% {
         transform: scale(1);
     }
@@ -66,13 +73,135 @@ header p,
 
 
 
-.img{
+.zipper-container {
+    width: 100%;
+    height: 5%; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align zipper to the top */
+}
+
+.cloud {
+    width: 250px; /* Adjust width as needed */
+    height: 150px; /* Adjust height as needed */
+    background: radial-gradient(circle at 20% 20%, #fff 20%, transparent 60%);
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0.8;
+    animation: moveClouds 30s infinite linear; /* Cloud moving animation */
+}
+
+/* Animation keyframes */
+@keyframes moveClouds {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%); /* Adjust horizontal movement distance */
+    }
+}
+
+.cloud-top {
+    top: 2%; /* Adjust vertical position of the top cloud */
+    left: 30%; /* Adjust horizontal position of the top cloud */
+    transform: translate(-50%, -50%); /* Center the top cloud horizontally and vertically */
+    z-index: 3; /* Place the top cloud on top */
+}
+
+.cloud-bottom-left {
+    top: 0%; /* Adjust vertical position of the bottom-left cloud */
+    left: 25%; /* Adjust horizontal position of the bottom-left cloud */
+    transform: translate(-50%, -50%); /* Center the bottom-left cloud horizontally and vertically */
+    z-index: 2; /* Place the bottom-left cloud below the top cloud */
+}
+
+.cloud-bottom-right {
+    top: 1%; /* Adjust vertical position of the bottom-right cloud */
+    left: 20%; /* Adjust horizontal position of the bottom-right cloud */
+    transform: translate(-50%, -50%); /* Center the bottom-right cloud horizontally and vertically */
+    z-index: 1; /* Place the bottom-right cloud below the top cloud */
+    
+
+}
+
+.cloud-top-2 {
+    top: 0%; /* Adjust vertical position of the top cloud */
+    left: 65%; /* Adjust horizontal position of the top cloud */
+    transform: translate(-50%, -50%); /* Center the top cloud horizontally and vertically */
+    z-index: 3; /* Place the top cloud on top */
+}
+
+.cloud-bottom-left-2 {
+    top: 0%; /* Adjust vertical position of the bottom-left cloud */
+    left: 60%; /* Adjust horizontal position of the bottom-left cloud */
+    transform: translate(-50%, -50%); /* Center the bottom-left cloud horizontally and vertically */
+    z-index: 2; /* Place the bottom-left cloud below the top cloud */
+}
+
+.cloud-bottom-right-2 {
+    top: 4%; /* Adjust vertical position of the bottom-right cloud */
+    left: 62%; /* Adjust horizontal position of the bottom-right cloud */
+    transform: translate(-50%, -50%); /* Center the bottom-right cloud horizontally and vertically */
+    z-index: 1; /* Place the bottom-right cloud below the top cloud */
+
+}
+
+.cloud-top-3 {
+    top: 1%; /* Adjust vertical position of the top cloud */
+    right: 68%; /* Adjust horizontal position of the top cloud */
+    transform: translate(-50%, -50%); /* Center the top cloud horizontally and vertically */
+    z-index: 3; /* Place the top cloud on top */
+}
+
+.cloud-bottom-left-3 {
+    top: 1%; /* Adjust vertical position of the bottom-left cloud */
+    right: 75%; /* Adjust horizontal position of the bottom-left cloud */
+    transform: translate(-50%, -50%); /* Center the bottom-left cloud horizontally and vertically */
+    z-index: 2; /* Place the bottom-left cloud below the top cloud */
+}
+
+.cloud-bottom-right-3 {
+    top: 4%; /* Adjust vertical position of the bottom-right cloud */
+    right: 70%; /* Adjust horizontal position of the bottom-right cloud */
+    transform: translate(-50%, -50%); /* Center the bottom-right cloud horizontally and vertically */
+    z-index: 1; /* Place the bottom-right cloud below the top cloud */
+
+}
+
+
+.smoke {
+    width: 250px; /* Adjust width as needed */
+    height: 150px; /* Adjust height as needed */
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white color for the smoke */
+    border-radius: 50%; /* Rounded shape */
+    position: absolute;
+    animation: smokeAnimation 8s infinite alternate ease-in-out; /* Smoke animation */
+    opacity: 0.8;
+    z-index: 2; /* Place the smoke above the cloud */
+    box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.5); /* Add a subtle shadow effect */
+}
+
+@keyframes smokeAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+
+.img {
     width: 20%;
     height: 20%;
-    margin-top: 10%;
-    margin-left: 26%;
-    animation: movebirds 5s infinite alternate; /* birds movement animation */
-    
+    padding-top: 10%;
+    margin: auto;
+    z-index: 7;
+    animation: movebirds 5s infinite alternate;
+    /* birds movement animation */
+
 }
 
 /*  Animation */
@@ -80,9 +209,11 @@ header p,
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-5%);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -92,15 +223,22 @@ header p,
 .sun,
 .moon {
     position: absolute;
-    top: 20%; /* Adjust positioning as needed */
-    right: 20%; /* Adjust positioning as needed */
-    width: 100px; /* Adjust size as needed */
-    height: 100px; /* Adjust size as needed */
+    top: 20%;
+    /* Adjust positioning as needed */
+    right: 20%;
+    /* Adjust positioning as needed */
+    width: 100px;
+    /* Adjust size as needed */
+    height: 100px;
+    /* Adjust size as needed */
     border-radius: 50%;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8); /* Glow effect for sun */
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+    /* Glow effect for sun */
     transition: transform 0.3s ease;
-    animation: moveSunmoon 5s infinite alternate; /* Sun  moon movement animation */
+    animation: moveSunmoon 5s infinite alternate;
+    /* Sun  moon movement animation */
     cursor: pointer;
+    
 }
 
 /* Sun mon Animation */
@@ -108,40 +246,55 @@ header p,
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-5%);
     }
+
     100% {
         transform: translateY(0);
     }
 }
 
 .sun {
-    background-color: #ffd700; /* Sun color */
-    box-shadow: 0 0 50px rgba(255, 215, 0, 0.8); 
+    background-color: #ffd700;
+    /* Sun color */
+    box-shadow: 0 0 50px rgba(255, 215, 0, 0.8);
 }
 
 .moon {
-    background-color: #f9f9f9; /* Moon color */
-    box-shadow: 0 0 50px rgba(255, 255, 255, 0.8); 
-    display: none; /* Initially hide the moon */
-    top: 20%; 
+    background-color: #f9f9f9;
+    /* Moon color */
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
+    display: none;
+    /* Initially hide the moon */
+    top: 20%;
     left: 20%;
+    z-index: 10;
 }
 
 /* Night Mode */
 body.night-mode {
-    background: linear-gradient(to bottom, #002147 0%, #0b1926 5%, #29445d 10%, #0b4880 100%); /* Dark blue to black gradient for nighttime */
-    color: #fff; /* White for better readability */
+    background: linear-gradient(to bottom, #002147 0%, #0b1926 5%, #29445d 10%, #0b4880 100%);
+    /* Dark blue to black gradient for nighttime */
+    color: #fff;
+    /* White for better readability */
 }
 
 body.night-mode .sun {
-    display: none; /* Hide the sun in night mode */
+    display: none;
+    /* Hide the sun in night mode */
 }
 
 body.night-mode .moon {
-    display: block; /* Show the moon in night mode */
-    transform: translateY(-5%); /* Move the moon slightly up in night mode */
+    display: block;
+    /* Show the moon in night mode */
+    transform: translateY(-5%);
+    /* Move the moon slightly up in night mode */
+}
+
+body.night-mode .cloud{
+    opacity: 0.10;
 }
 
 
@@ -149,10 +302,13 @@ body.night-mode .moon {
 .star {
     position: absolute;
     background-color: #fff;
-    width: 1px; /* Adjust size as needed */
-    height: 1px; /* Adjust size as needed */
+    width: 1px;
+    /* Adjust size as needed */
+    height: 1px;
+    /* Adjust size as needed */
     border-radius: 50%;
-    animation: twinklingStars 2s infinite; /* Star twinkling animation */
+    animation: twinklingStars 2s infinite;
+    /* Star twinkling animation */
 }
 
 /* Animations */
@@ -160,9 +316,11 @@ body.night-mode .moon {
     0% {
         opacity: 0.5;
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         opacity: 0.5;
     }
@@ -170,53 +328,73 @@ body.night-mode .moon {
 
 /* Star positions */
 .star1 {
-    top: 50%; /* Adjust positioning as needed */
-    left: 38%; /* Adjust positioning as needed */
+    top: 50%;
+    /* Adjust positioning as needed */
+    left: 38%;
+    /* Adjust positioning as needed */
 }
 
 .star2 {
-    top: 30%; /* Adjust positioning as needed */
-    left: 60%; /* Adjust positioning as needed */
+    top: 30%;
+    /* Adjust positioning as needed */
+    left: 60%;
+    /* Adjust positioning as needed */
 }
 
 .star3 {
-    top: 35%; /* Adjust positioning as needed */
-    left: 15%; /* Adjust positioning as needed */
+    top: 35%;
+    /* Adjust positioning as needed */
+    left: 15%;
+    /* Adjust positioning as needed */
 }
 
 .star4 {
-    top:  35%; /* Adjust positioning as needed */
-    left: 50%; /* Adjust positioning as needed */
+    top: 35%;
+    /* Adjust positioning as needed */
+    left: 50%;
+    /* Adjust positioning as needed */
 }
 
 .star5 {
-    top: 40%; /* Adjust positioning as needed */
-    left: 30%; /* Adjust positioning as needed */
+    top: 40%;
+    /* Adjust positioning as needed */
+    left: 30%;
+    /* Adjust positioning as needed */
 }
 
 .star6 {
-    top: 50%; /* Adjust positioning as needed */
-    left: 20%; /* Adjust positioning as needed */
+    top: 50%;
+    /* Adjust positioning as needed */
+    left: 20%;
+    /* Adjust positioning as needed */
 }
 
 .star7 {
-    top: 35%; /* Adjust positioning as needed */
-    left: 87%; /* Adjust positioning as needed */
+    top: 35%;
+    /* Adjust positioning as needed */
+    left: 87%;
+    /* Adjust positioning as needed */
 }
 
 .star8 {
-    top: 10%; /* Adjust positioning as needed */
-    left: 5%; /* Adjust positioning as needed */
+    top: 10%;
+    /* Adjust positioning as needed */
+    left: 5%;
+    /* Adjust positioning as needed */
 }
 
 .star9 {
-    top: 20%; /* Adjust positioning as needed */
-    left: 68%; /* Adjust positioning as needed */
+    top: 20%;
+    /* Adjust positioning as needed */
+    left: 68%;
+    /* Adjust positioning as needed */
 }
 
 .star10 {
-    top: 20%; /* Adjust positioning as needed */
-    left: 90%; /* Adjust positioning as needed */
+    top: 20%;
+    /* Adjust positioning as needed */
+    left: 90%;
+    /* Adjust positioning as needed */
 }
 
 /* Add more star positions as needed */
@@ -226,13 +404,14 @@ body.night-mode .moon {
 
 /* Media Queries for Responsive Design */
 @media screen and (max-width: 768px) {
+
     /* Adjust moon and star sizes and positions for smaller screens */
     .moon {
         top: 15%;
         left: 10%;
         width: 50px;
         height: 50px;
-        
+
     }
 
     .sun {
@@ -240,69 +419,97 @@ body.night-mode .moon {
         right: 10%;
         width: 50px;
         height: 50px;
-        
+
     }
 
-        /* Star positions */
+    /* Star positions */
     .star1 {
-    top: 15%; /* Adjust positioning as needed */
-    left: 90%; /* Adjust positioning as needed */
+        top: 15%;
+        /* Adjust positioning as needed */
+        left: 90%;
+        /* Adjust positioning as needed */
     }
 
     .star2 {
-    top: 20%; /* Adjust positioning as needed */
-    left: 50%; /* Adjust positioning as needed */
+        top: 20%;
+        /* Adjust positioning as needed */
+        left: 50%;
+        /* Adjust positioning as needed */
     }
 
     .star3 {
-    top: 35%; /* Adjust positioning as needed */
-    left: 15%; /* Adjust positioning as needed */
+        top: 35%;
+        /* Adjust positioning as needed */
+        left: 15%;
+        /* Adjust positioning as needed */
     }
 
     .star4 {
-    top:  26%; /* Adjust positioning as needed */
-    left: 40%; /* Adjust positioning as needed */
+        top: 26%;
+        /* Adjust positioning as needed */
+        left: 40%;
+        /* Adjust positioning as needed */
     }
 
     .star5 {
-    top: 27%; /* Adjust positioning as needed */
-    left: 30%; /* Adjust positioning as needed */
+        top: 27%;
+        /* Adjust positioning as needed */
+        left: 30%;
+        /* Adjust positioning as needed */
     }
 
     .star6 {
-    top: 25%; /* Adjust positioning as needed */
-    left: 20%; /* Adjust positioning as needed */
+        top: 25%;
+        /* Adjust positioning as needed */
+        left: 20%;
+        /* Adjust positioning as needed */
     }
 
     .star7 {
-    top: 15%; /* Adjust positioning as needed */
-    left: 45%; /* Adjust positioning as needed */
+        top: 15%;
+        /* Adjust positioning as needed */
+        left: 45%;
+        /* Adjust positioning as needed */
     }
 
     .star8 {
-    top: 20%; /* Adjust positioning as needed */
-    left: 70%; /* Adjust positioning as needed */
+        top: 20%;
+        /* Adjust positioning as needed */
+        left: 70%;
+        /* Adjust positioning as needed */
     }
 
     .star9 {
-    top: 30%; /* Adjust positioning as needed */
-    left: 68%; /* Adjust positioning as needed */
+        top: 30%;
+        /* Adjust positioning as needed */
+        left: 68%;
+        /* Adjust positioning as needed */
     }
 
     .star10 {
-    top: 20%; /* Adjust positioning as needed */
-    left: 35%; /* Adjust positioning as needed */
+        top: 20%;
+        /* Adjust positioning as needed */
+        left: 35%;
+        /* Adjust positioning as needed */
     }
 
     /* Add more star positions as needed */
 
-    .img{
-        width: 25%;
-        height: 25%;
-        padding-top: 23%;
-        
+    .img {
+        width: 50%;
+        height: 50%;
+        padding-top: 50%;
+        margin-left: 50%;
+
+
+    }
+
+    .smoke {
+        width: 150px; /* Adjust width as needed */
+        height: 100px; /* Adjust height as needed */
         
     }
+    
 }
 
 
@@ -313,7 +520,7 @@ header {
     padding: 4em 0;
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease;
-    
+
 }
 
 
@@ -331,20 +538,21 @@ nav {
     width: 80%;
     height: 8%;
     left: 10%;
-    
+    z-index: 9;
 
-    
+
+
 }
 
-nav a img{
+nav a img {
     width: 50px;
     height: 50px;
     padding: 0;
     margin-inline-end: 400px;
-    
-    
-    
-    
+
+
+
+
 }
 
 nav a {
@@ -354,6 +562,7 @@ nav a {
     margin-top: auto;
     font-size: 1.2em;
     font-weight: 700;
+    letter-spacing: 0.5px;
     transition: color 0.3s ease;
 
 }
@@ -370,9 +579,11 @@ nav a:hover {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.1);
     }
+
     100% {
         transform: scale(1);
     }
@@ -391,7 +602,7 @@ nav a:hover {
 .hero-section {
     text-align: center;
     padding: 4em;
-    
+
     background-position: center;
 }
 
@@ -425,7 +636,7 @@ nav a:hover {
     border-radius: 5px;
     transition: background-color 0.3s ease;
     box-shadow: 0px 10px 10px rgb(100 100 100 /50%);
-    
+
 }
 
 .cta-button:hover {
@@ -439,15 +650,17 @@ nav a:hover {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.1);
     }
+
     100% {
         transform: scale(1);
     }
 }
 
-.cta-buttonx{
+.cta-buttonx {
     display: flex;
     margin-left: 45%;
     padding: 1em 2em;
@@ -473,9 +686,11 @@ nav a:hover {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.1);
     }
+
     100% {
         transform: scale(1);
     }
@@ -483,15 +698,15 @@ nav a:hover {
 
 #features {
     padding: 4em;
-    background-position: center;  
-    
+    background-position: center;
+
 }
 
-#features h2{
+#features h2 {
     color: #ffcc00;
 }
 
-#features ul li{
+#features ul li {
     color: black;
 }
 
@@ -509,7 +724,7 @@ footer {
 /* ... Existing styles ... */
 
 #contact {
-    
+
     color: #fff;
     padding: 4em;
     text-align: center;
@@ -552,7 +767,7 @@ button {
 /* Additional styles for icons and progress bar */
 .cta-button i {
     margin-right: 5px;
-    
+
 }
 
 .progress-bar-container {
@@ -586,7 +801,7 @@ button {
     flex-direction: row;
 }
 
-#team h2{
+#team h2 {
     margin: auto;
 
 }
@@ -603,7 +818,7 @@ button {
 }
 
 .team-member:hover {
-    
+
     box-shadow: 0px 10px 10px rgb(100 100 100 /80%);
     animation: hoverAnimation 0.5s ease;
     cursor: pointer;
@@ -613,9 +828,11 @@ button {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.1);
     }
+
     100% {
         transform: scale(1);
     }
@@ -661,15 +878,15 @@ button {
     text-align: center;
     display: flex;
     flex-direction: row;
-    
-    
+
+
 }
 
-#pricing h2{
+#pricing h2 {
     color: #ffcc00;
     margin: auto;
-    
-       
+
+
 
 }
 
@@ -692,9 +909,11 @@ button {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.1);
     }
+
     100% {
         transform: scale(1);
     }
@@ -744,7 +963,7 @@ button {
     padding: 4em 0;
 }
 
-#faq h2{
+#faq h2 {
     color: #ffcc00;
 }
 
@@ -788,7 +1007,7 @@ button {
 /* ... Existing styles ... */
 
 #contact-info {
-    
+
     color: #ffcc00;
     padding: 4em 0;
     text-align: center;
@@ -826,10 +1045,10 @@ button {
         height: 6%;
         left: 5%;
         padding: 5px;
-        
-        
-        
-        
+
+
+
+
     }
 
     nav a {
@@ -837,23 +1056,23 @@ button {
         margin-top: auto;
         margin-bottom: auto;
         font-size: smaller;
-        
-        
-    
-        
 
-}
 
-    nav a img{
+
+
+
+    }
+
+    nav a img {
         width: 40px;
         height: 42px;
         margin-inline-end: auto;
-        
 
-        
-    
-        
-        
+
+
+
+
+
     }
 
     .hero-content h2 {
@@ -870,19 +1089,19 @@ button {
         padding: 2em;
     }
 
-    #team{
+    #team {
         display: flex;
         flex-direction: column;
         padding: 20px;
     }
 
-    #pricing{
+    #pricing {
         display: flex;
         flex-direction: column;
-    
+
     }
 
-    
+
 }
 
 /* Responsive design for smaller screens */
@@ -929,20 +1148,32 @@ button {
 
     footer {
         font-size: smaller;
-    
+
     }
 
     #faq {
         padding: 20px;
     }
 
-    #contact-info{
+    #contact-info {
         padding: 20px;
-        
+
     }
 
-    .cta-buttonx{
+    .cta-buttonx {
         margin: auto;
+    }
+
+    .zipper-container {
+        width: 50%;
+        height: 3%; /* Adjust height as needed */
+    
+    }
+    
+    .cloud {
+        width: 100px; /* Adjust width as needed */
+        height: 50px; /* Adjust height as needed */
+        
     }
 
 
