@@ -261,6 +261,8 @@ header p,
     background-color: #ffd700;
     /* Sun color */
     box-shadow: 0 0 50px rgba(255, 215, 0, 0.8);
+    z-index: 0;
+    
 }
 
 .moon {
@@ -271,7 +273,7 @@ header p,
     /* Initially hide the moon */
     top: 20%;
     left: 20%;
-    z-index: 4;
+    z-index: 0;
 }
 
 /* Night Mode */
@@ -543,7 +545,7 @@ header {
 
 
 nav {
-    background-color: #a28a1fb1;
+    background-color: #9b7f01b1;
     position: fixed;
     top: 30px;
     display: flex;
@@ -725,7 +727,7 @@ nav a:hover {
 }
 
 footer {
-    background-color: #a28a1fb1;
+    background-color: #9b7f01b1;
     color: #fff;
     text-align: center;
     padding: 1.5em;
