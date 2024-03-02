@@ -1052,15 +1052,10 @@ button {
 /* Styles for responsive design */
 @media screen and (max-width: 768px) {
     nav {
-        display: flex;
-        justify-content: center;
-        justify-content: space-between;
-        flex-direction: row;
-        align-items: flex-start;
         width: 90%;
         height: 6%;
         left: 4%;
-        padding: 4px;
+        padding: 3px;
 
 
 
