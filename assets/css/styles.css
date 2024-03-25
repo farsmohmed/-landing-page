@@ -545,7 +545,7 @@ header {
 
 
 nav {
-    background-color: #9b7f01b1;
+    background-color: #ffcc007a;
     position: fixed;
     top: 30px;
     display: flex;
@@ -727,7 +727,7 @@ nav a:hover {
 }
 
 footer {
-    background-color: #9b7f01b1;
+    background-color: #ffcc007a;
     color: #fff;
     text-align: center;
     padding: 1.5em;
