@@ -66,6 +66,18 @@ async function displayHeaderContentsSequentially() {
 displayHeaderContentsSequentially();
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const body = document.body;
+    
+    // Set initial state to night mode
+    body.classList.add('night-mode');
+
+    // Your other JavaScript code here
+    // Smooth scrolling, form submission handling, etc.
+});
+
+
+
 
 
 
