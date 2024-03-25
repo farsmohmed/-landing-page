@@ -52,12 +52,12 @@ async function displayHeaderContentsSequentially() {
     const tagline = document.querySelector('header p');
     const ctaContainer = document.querySelector('.cta-container');
     
-    await delay(4000);
+    await delay(1000);
     companyName.style.display = 'block'; // Display the company name
-    await delay(2000); // Wait for 1 second
+    await delay(1000); // Wait for 1 second
 
     tagline.style.display = 'block'; // Display the tagline
-    await delay(2000); // Wait for 1 second
+    await delay(1000); // Wait for 1 second
 
     ctaContainer.style.display = 'block'; // Display the call-to-action button
 }
