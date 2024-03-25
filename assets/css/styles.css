@@ -75,20 +75,25 @@ header p,
 
 .zipper-container {
     width: 100%;
-    height: 6%; /* Adjust height as needed */
+    height: 6%;
+    /* Adjust height as needed */
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align zipper to the top */
+    align-items: flex-start;
+    /* Align zipper to the top */
 }
 
 .cloud {
-    width: 250px; /* Adjust width as needed */
-    height: 150px; /* Adjust height as needed */
+    width: 250px;
+    /* Adjust width as needed */
+    height: 150px;
+    /* Adjust height as needed */
     background: radial-gradient(circle at 20% 20%, #fff 20%, transparent 60%);
     border-radius: 50%;
     position: absolute;
     opacity: 0.8;
-    animation: moveClouds 30s infinite linear; /* Cloud moving animation */
+    animation: moveClouds 30s infinite linear;
+    /* Cloud moving animation */
     z-index: 3;
 }
 
@@ -97,89 +102,134 @@ header p,
     0% {
         transform: translateX(100%);
     }
+
     100% {
-        transform: translateX(-100%); /* Adjust horizontal movement distance */
+        transform: translateX(-100%);
+        /* Adjust horizontal movement distance */
     }
 }
 
 .cloud-top {
-    top: 2%; /* Adjust vertical position of the top cloud */
-    left: 30%; /* Adjust horizontal position of the top cloud */
-    transform: translate(-50%, -50%); /* Center the top cloud horizontally and vertically */
-    z-index: 3; /* Place the top cloud on top */
+    top: 2%;
+    /* Adjust vertical position of the top cloud */
+    left: 30%;
+    /* Adjust horizontal position of the top cloud */
+    transform: translate(-50%, -50%);
+    /* Center the top cloud horizontally and vertically */
+    z-index: 3;
+    /* Place the top cloud on top */
 }
 
 .cloud-bottom-left {
-    top: 0%; /* Adjust vertical position of the bottom-left cloud */
-    left: 25%; /* Adjust horizontal position of the bottom-left cloud */
-    transform: translate(-50%, -50%); /* Center the bottom-left cloud horizontally and vertically */
-    z-index: 2; /* Place the bottom-left cloud below the top cloud */
+    top: 0%;
+    /* Adjust vertical position of the bottom-left cloud */
+    left: 25%;
+    /* Adjust horizontal position of the bottom-left cloud */
+    transform: translate(-50%, -50%);
+    /* Center the bottom-left cloud horizontally and vertically */
+    z-index: 2;
+    /* Place the bottom-left cloud below the top cloud */
 }
 
 .cloud-bottom-right {
-    top: 1%; /* Adjust vertical position of the bottom-right cloud */
-    left: 20%; /* Adjust horizontal position of the bottom-right cloud */
-    transform: translate(-50%, -50%); /* Center the bottom-right cloud horizontally and vertically */
-    z-index: 1; /* Place the bottom-right cloud below the top cloud */
-    
+    top: 1%;
+    /* Adjust vertical position of the bottom-right cloud */
+    left: 20%;
+    /* Adjust horizontal position of the bottom-right cloud */
+    transform: translate(-50%, -50%);
+    /* Center the bottom-right cloud horizontally and vertically */
+    z-index: 1;
+    /* Place the bottom-right cloud below the top cloud */
+
 
 }
 
 .cloud-top-2 {
-    top: 0%; /* Adjust vertical position of the top cloud */
-    left: 65%; /* Adjust horizontal position of the top cloud */
-    transform: translate(-50%, -50%); /* Center the top cloud horizontally and vertically */
-    z-index: 3; /* Place the top cloud on top */
+    top: 0%;
+    /* Adjust vertical position of the top cloud */
+    left: 65%;
+    /* Adjust horizontal position of the top cloud */
+    transform: translate(-50%, -50%);
+    /* Center the top cloud horizontally and vertically */
+    z-index: 3;
+    /* Place the top cloud on top */
 }
 
 .cloud-bottom-left-2 {
-    top: 0%; /* Adjust vertical position of the bottom-left cloud */
-    left: 60%; /* Adjust horizontal position of the bottom-left cloud */
-    transform: translate(-50%, -50%); /* Center the bottom-left cloud horizontally and vertically */
-    z-index: 2; /* Place the bottom-left cloud below the top cloud */
+    top: 0%;
+    /* Adjust vertical position of the bottom-left cloud */
+    left: 60%;
+    /* Adjust horizontal position of the bottom-left cloud */
+    transform: translate(-50%, -50%);
+    /* Center the bottom-left cloud horizontally and vertically */
+    z-index: 2;
+    /* Place the bottom-left cloud below the top cloud */
 }
 
 .cloud-bottom-right-2 {
-    top: 4%; /* Adjust vertical position of the bottom-right cloud */
-    left: 62%; /* Adjust horizontal position of the bottom-right cloud */
-    transform: translate(-50%, -50%); /* Center the bottom-right cloud horizontally and vertically */
-    z-index: 1; /* Place the bottom-right cloud below the top cloud */
+    top: 4%;
+    /* Adjust vertical position of the bottom-right cloud */
+    left: 62%;
+    /* Adjust horizontal position of the bottom-right cloud */
+    transform: translate(-50%, -50%);
+    /* Center the bottom-right cloud horizontally and vertically */
+    z-index: 1;
+    /* Place the bottom-right cloud below the top cloud */
 
 }
 
 .cloud-top-3 {
-    top: 1%; /* Adjust vertical position of the top cloud */
-    right: 68%; /* Adjust horizontal position of the top cloud */
-    transform: translate(-50%, -50%); /* Center the top cloud horizontally and vertically */
-    z-index: 3; /* Place the top cloud on top */
+    top: 1%;
+    /* Adjust vertical position of the top cloud */
+    right: 68%;
+    /* Adjust horizontal position of the top cloud */
+    transform: translate(-50%, -50%);
+    /* Center the top cloud horizontally and vertically */
+    z-index: 3;
+    /* Place the top cloud on top */
 }
 
 .cloud-bottom-left-3 {
-    top: 1%; /* Adjust vertical position of the bottom-left cloud */
-    right: 75%; /* Adjust horizontal position of the bottom-left cloud */
-    transform: translate(-50%, -50%); /* Center the bottom-left cloud horizontally and vertically */
-    z-index: 2; /* Place the bottom-left cloud below the top cloud */
+    top: 1%;
+    /* Adjust vertical position of the bottom-left cloud */
+    right: 75%;
+    /* Adjust horizontal position of the bottom-left cloud */
+    transform: translate(-50%, -50%);
+    /* Center the bottom-left cloud horizontally and vertically */
+    z-index: 2;
+    /* Place the bottom-left cloud below the top cloud */
 }
 
 .cloud-bottom-right-3 {
-    top: 4%; /* Adjust vertical position of the bottom-right cloud */
-    right: 70%; /* Adjust horizontal position of the bottom-right cloud */
-    transform: translate(-50%, -50%); /* Center the bottom-right cloud horizontally and vertically */
-    z-index: 1; /* Place the bottom-right cloud below the top cloud */
+    top: 4%;
+    /* Adjust vertical position of the bottom-right cloud */
+    right: 70%;
+    /* Adjust horizontal position of the bottom-right cloud */
+    transform: translate(-50%, -50%);
+    /* Center the bottom-right cloud horizontally and vertically */
+    z-index: 1;
+    /* Place the bottom-right cloud below the top cloud */
 
 }
 
 
 .smoke {
-    width: 250px; /* Adjust width as needed */
-    height: 150px; /* Adjust height as needed */
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white color for the smoke */
-    border-radius: 50%; /* Rounded shape */
+    width: 250px;
+    /* Adjust width as needed */
+    height: 150px;
+    /* Adjust height as needed */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Semi-transparent white color for the smoke */
+    border-radius: 50%;
+    /* Rounded shape */
     position: absolute;
-    animation: smokeAnimation 8s infinite alternate ease-in-out; /* Smoke animation */
+    animation: smokeAnimation 8s infinite alternate ease-in-out;
+    /* Smoke animation */
     opacity: 0.8;
-    z-index: 2; /* Place the smoke above the cloud */
-    box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.5); /* Add a subtle shadow effect */
+    z-index: 2;
+    /* Place the smoke above the cloud */
+    box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.5);
+    /* Add a subtle shadow effect */
 }
 
 @keyframes smokeAnimation {
@@ -187,6 +237,7 @@ header p,
         transform: scale(1);
         opacity: 0.8;
     }
+
     100% {
         transform: scale(1.2);
         opacity: 0;
@@ -239,7 +290,7 @@ header p,
     animation: moveSunmoon 5s infinite alternate;
     /* Sun  moon movement animation */
     cursor: pointer;
-    
+
 }
 
 /* Sun mon Animation */
@@ -262,7 +313,7 @@ header p,
     /* Sun color */
     box-shadow: 0 0 50px rgba(255, 215, 0, 0.8);
     z-index: 0;
-    
+
 }
 
 .moon {
@@ -274,6 +325,47 @@ header p,
     top: 20%;
     left: 20%;
     z-index: 0;
+}
+
+.moon:hover {
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
+    animation: hoverAnimation 0.5s ease;
+    cursor: pointer;
+}
+
+@keyframes hoverAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.sun:hover {
+    box-shadow: 0 0 20px rgba(255, 217, 0, 0.963);
+    animation: hoverAnimation 0.5s ease;
+    cursor: pointer;
+}
+
+@keyframes hoverAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* Night Mode */
@@ -296,7 +388,8 @@ body.night-mode .moon {
     /* Move the moon slightly up in night mode */
 }
 
-body.night-mode .cloud, .smoke {
+body.night-mode .cloud,
+.smoke {
     opacity: 0.10;
 }
 
@@ -508,24 +601,29 @@ body.night-mode .cloud, .smoke {
     }
 
     .smoke {
-        width: 100px; /* Adjust width as needed */
-        height: 50px; /* Adjust height as needed */
+        width: 100px;
+        /* Adjust width as needed */
+        height: 50px;
+        /* Adjust height as needed */
 
-        
+
     }
 
     .zipper-container {
         width: 50%;
-        height: 3%; /* Adjust height as needed */
-    
+        height: 3%;
+        /* Adjust height as needed */
+
     }
-    
+
     .cloud {
-        width: 100px; /* Adjust width as needed */
-        height: 50px; /* Adjust height as needed */
-        
+        width: 100px;
+        /* Adjust width as needed */
+        height: 50px;
+        /* Adjust height as needed */
+
     }
-    
+
 }
 
 
